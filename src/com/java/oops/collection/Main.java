@@ -5,17 +5,19 @@ import com.java.oops.collection.model.Customer;
 public class Main {
     static void main() {
         Customer customer = new Customer();
-        customer.setId(1111);
-        customer.setName("ujwala");
-        customer.setAddress("hyderabad");
-        customer.setEmail("abc@123");
-        customer.setPhoneNo("123456");
+        // builder design pattern
+        // replace void in settors with class name and return this
+        customer.setId(1111)
+                .setName("ujwala")
+                .setAddress("hyderabad")
+                .setEmail("abc@123")
+                .setPhoneNo("123456");
 
         System.out.println("id :"+ customer.getId());
         System.out.println("name:"+customer.getName());
         System.out.println("email"+customer.getEmail());
-        System.out.println("PhoneNo"+customer.getPhoneNo());
-        System.out.println("address"+customer.getAddress());
+        System.out.println("PhoneNo:"+customer.getPhoneNo());
+        System.out.println("address:"+customer.getAddress());
 
 
         //reference variable or object print

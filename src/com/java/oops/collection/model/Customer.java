@@ -17,40 +17,45 @@ public class Customer {
         return id;
     }
 
-    public void setId(int id) {
+    public Customer setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Customer setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Customer setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(String phoneNo) {
+    public Customer setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
+        return this;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public Customer setAddress(String address) {
         this.address = address;
+        return this;
     }
 
     @Override// toString is a by default object class method
