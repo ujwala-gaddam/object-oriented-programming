@@ -1,6 +1,8 @@
 package com.java.oops.model;
 
-public class Customer {
+import java.util.Objects;
+
+public class Customer  implements Comparable<Customer>{
     // private properties
     private int id;
     private String name;
@@ -58,6 +60,18 @@ public class Customer {
         return this;
     }
 
+    @Override // che       cks duplicates objects in code
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return id == customer.id && Objects.equals(name, customer.name) && Objects.equals(email, customer.email) && Objects.equals(phoneNo, customer.phoneNo) && Objects.equals(address, customer.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email, phoneNo, address);
+    }
+
     @Override// toString is a by default object class method
     public String toString() {
         return "Customer{" +
@@ -67,5 +81,13 @@ public class Customer {
                 ", phoneNo='" + phoneNo + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+
+
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        return  this.name.compareTo(o.name);
+
     }
 }

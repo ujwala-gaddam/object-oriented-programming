@@ -22,9 +22,11 @@ public class Main {
 
         //reference variable or object print
         //System.out.println(customer);
-        //output classtype@hashcode
+        //output classtype @hashcode
         //com.java.oops.model.Customer@2a84aee7
         // to avoid this need to overide to string
+
+
         System.out.println(customer);
 
     }

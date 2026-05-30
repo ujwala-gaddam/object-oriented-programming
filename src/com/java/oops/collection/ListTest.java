@@ -1,14 +1,14 @@
 package com.java.oops.collection;
 
-import com.java.oops.comparator.CustomerEmailAscComparator;
-import com.java.oops.comparator.CustomerIdAscComparator;
 import com.java.oops.model.Customer;
-import java.util.Set;
-import java.util.TreeSet;
 
-public class CustomerSet {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListTest {
     static void main() {
-    Set<Customer> customerSet =new TreeSet  < >(new CustomerEmailAscComparator());
+        List<Customer> customers =new ArrayList<>();
+
         // builder design pattern
         // replace void in settors with class name and return this
         Customer customer = new Customer();
@@ -42,12 +42,13 @@ public class CustomerSet {
                 .setEmail("aa@123")
                 .setPhoneNo("123456");
 
-        customerSet.add(customer);
-        customerSet.add(customer1);
-        customerSet.add(customer2);
-        customerSet.add(customer3);
-        System.out.println(customerSet.size());
-        System.out.println(customerSet);
+        customers.add(customer);
+        customers.add(customer1);
+        customers.add(customer2);
+        customers.add(customer3);
+        System.out.println(customers.size());
+        System.out.println(customers);
+        System.out.println(customers.size(0));
 
 
 
