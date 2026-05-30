@@ -1,6 +1,6 @@
 package com.java.oops.collection;
 
-import com.java.oops.collection.model.Customer;
+import com.java.oops.model.Customer;
 
 public class Main {
     static void main() {
@@ -23,7 +23,7 @@ public class Main {
         //reference variable or object print
         //System.out.println(customer);
         //output classtype@hashcode
-        //com.java.oops.collection.model.Customer@2a84aee7
+        //com.java.oops.model.Customer@2a84aee7
         // to avoid this need to overide to string
         System.out.println(customer);
 

@@ -1,4 +1,4 @@
-package com.java.oops.collection.model;
+package com.java.oops.model;
 
 public class Customer {
     // private properties
