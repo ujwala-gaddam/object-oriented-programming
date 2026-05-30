@@ -7,12 +7,14 @@ import java.util.List;
 
 public class ListTest {
     static void main() {
-        List<Customer> customers =new ArrayList<>();
+
+        List<Customer> customers = new ArrayList<>();
 
         // builder design pattern
         // replace void in settors with class name and return this
-        Customer customer = new Customer();
-        customer.setId(1111)
+
+        Customer customer0 = new Customer();
+        customer0.setId(1111)
                 .setName("ujwala")
                 .setAddress("hyderabad")
                 .setEmail("ac@123")
@@ -42,13 +44,17 @@ public class ListTest {
                 .setEmail("aa@123")
                 .setPhoneNo("123456");
 
-        customers.add(customer);
+        customers.add(customer0);
         customers.add(customer1);
         customers.add(customer2);
         customers.add(customer3);
-        System.out.println(customers.size());
+       System.out.println(customers.size());
         System.out.println(customers);
-        System.out.println(customers.size(0));
+        System.out.println(customers.get(0));
+
+        for(Customer customer :customers){
+            System.out.println(customer.getEmail());
+        }
 
 
 
